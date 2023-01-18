@@ -11,6 +11,12 @@
         <p id="prediction_output">{{ prediction }}</p>
         <p>The wine quality is {{prediction_number}} out of {{number_range}}</p>
     </div>
+    <div id="progress-bar"></div>
+<script>
+    const progressBar = document.getElementById("progress-bar");
+    progressBar.classList.add("{{ prediction_class }}");
+</script>
 </body>
 </html>
+
 
