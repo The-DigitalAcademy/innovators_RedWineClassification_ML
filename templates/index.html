@@ -1,0 +1,70 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Red Wine Quality Classifier</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Red Wine Quality Classifier</h1>
+        <form action="{{url_for('predict')}}" method="POST">
+            <label for="fixed_acidity">Fixed Acidity:</label>
+            <input type="text" id="fixed_acidity" name="fixed_acidity" oninput="handleDecimal(event)">
+            <br>
+            <label for="volatile_acidity">Volatile Acidity:</label>
+            <input type="text" id="volatile_acidity" name="volatile_acidity" oninput="handleDecimal(event)">
+            <br>
+            <label for="citric_acid">Citric Acid:</label>
+            <input type="text" id="citric_acid" name="citric_acid" oninput="handleDecimal(event)">
+            <br>
+            <label for="residual_sugar">Residual Sugar:</label>
+            <input type="text" id="residual_sugar" name="residual_sugar" oninput="handleDecimal(event)">
+            <br>
+            <label for="chlorides">Chlorides:</label>
+            <input type="text" id="chlorides" name="chlorides" oninput="handleDecimal(event)">
+            <br>
+            <label for="free_sulfur_dioxide">Free Sulfur Dioxide:</label>
+            <input type="text" id="free_sulfur_dioxide" name="free_sulfur_dioxide" oninput="handleDecimal(event)">
+            <br>
+            <label for="total_sulfur_dioxide">Total Sulfur Dioxide:</label>
+            <input type="text" id="total_sulfur_dioxide" name="total_sulfur_dioxide" oninput="handleDecimal(event)">
+            <br>
+            <label for="density">Density:</label>
+            <input type="text" id="density" name="density" oninput="handleDecimal(event)">
+            <br>
+            <label for="pH">pH:</label>
+            <input type="text" id="pH" name="pH" oninput="handleDecimal(event)">
+            <br>
+            <label for="sulphates">Sulphates:</label>
+            <input type="text" id="sulphates" name="sulphates" oninput="handleDecimal(event)">
+            <br>
+            <label for="alcohol">Alcohol:</label>
+            <input type="text" id="alcohol" name="alcohol" oninput="handleDecimal(event)">
+            <br>
+            <button type="submit" id="submit_button">Submit</button>
+        </form>
+    </div>
+</body>
+<script>
+    function handleDecimal(event) {
+        // Get the input element
+        var input = event.target;
+        // Get the current value of the input element
+        var inputValue = input.value;
+        // Check if the current value contains a decimal point
+        if (inputValue.includes(".")) {
+            // Get the position of the decimal point
+            var decimalIndex = inputValue.indexOf(".");
+            // Get the number of digits after the decimal point
+            var decimalLength = inputValue.length - decimalIndex - 1;
+            // Check if there are more than 2 digits after the decimal point
+            if (decimalLength > 2) {
+                // Truncate the value to 2 decimal places
+                input.value = inputValue.slice(0, decimalIndex + 3);
+            }
+        }
+    }
+</script>
+
+</html>
