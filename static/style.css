@@ -42,3 +42,24 @@ input[type="submit"]:hover {
     font-size: 1.5em;
     margin-top: 20px;
 }
+
+
+#progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: grey;
+}
+.good {
+    width: 80%;
+    background-color: green;
+}
+
+.medium {
+    width: 50%;
+    background-color: orange;
+}
+
+.bad {
+    width: 20%;
+    background-color: red;
+}

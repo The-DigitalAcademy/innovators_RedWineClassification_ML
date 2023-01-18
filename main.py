@@ -37,17 +37,22 @@ def predict():
     
     # Create output message
     if prediction >= 3 and prediction <= 4:
-        output_message = "This wine is bad"
+        output_message = "This wine is bad quality"
         output_number = "3-4"
+        output_class = "bad"
+        wid_value = 30
     elif prediction >= 5 and prediction <= 6:
-        output_message = "This wine is medium"
+        output_message = "This wine is medium quality"
         output_number = "5-6"
+        output_class = "medium"
+        wid_value = 60
     else:
-        output_message = "This wine is good"
+        output_message = "This wine is good quality"
         output_number = "7-8"
-
+        output_class = "good"
+        wid_value = 100
     
-    return render_template("prediction.html", prediction=output_message,prediction_number=prediction,number_range = output_number)
+    return render_template("prediction.html", prediction=output_message,prediction_number=prediction,number_range = output_number, prediction_class = output_class ,width_value=wid_value)
 
 if __name__ == "__main__":
     app.run(debug=True)
