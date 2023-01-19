@@ -9,13 +9,8 @@
     <div class="container">
         <h1>Prediction</h1>
         <p id="prediction_output">{{ prediction }}</p>
-        <p>The wine quality is {{prediction_number}} out of {{number_range}}</p>
+        <p>The wine quality is {{prediction_number}} out of 10</p>
     </div>
-    <div id="progress-bar"></div>
-<script>
-    const progressBar = document.getElementById("progress-bar");
-    progressBar.classList.add("{{ prediction_class }}");
-</script>
 </body>
 </html>
 
