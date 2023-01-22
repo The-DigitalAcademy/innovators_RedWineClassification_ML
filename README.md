@@ -1,10 +1,12 @@
 # innovators_RedWineClassification_ML
-ABOUT DATASET
+# ABOUT DATASET
+
 The Wine Quality dataset contains information about various physicochemical properties of wines.
 We are going to perform analysis to see the effect of eleven chemical properties on wine quality.
 the target variable Quality ratings range from 3 to 8.
 
-FEATURES DESCRIPTION
+# FEATURES DESCRIPTION
+
 Fixed acidity: It indicates the amount of tartaric acid in wine and is measured in g/dm3
 Volatile acidity: It indicates the amount of acetic acid in the wine. It is measured in g/dm3.
 Citric acid: It indicates the amount of citric acid in the wine. It is also measured in g/dm3
